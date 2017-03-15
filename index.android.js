@@ -17,7 +17,7 @@ class MainNavigator extends Component {
     } else if (route.name === 'Scan') {
       return <Scan navigator={navigator} />;
     } else if (route.name === 'Upload') {
-      return <Upload navigator={navigator} />;
+      return <Upload path={route.path} navigator={navigator} />;
     }
   }
   render() {

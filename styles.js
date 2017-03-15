@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   mainView: {
+    flex: 1,
     backgroundColor: '#fff'
   },
   home: {
@@ -38,8 +39,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   actions: {
-    flex: 0,
-    width: 430
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    width: 412
+  },
+  previewImage: {
+    flex: 1
   }
 });
 
