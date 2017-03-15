@@ -64,6 +64,17 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 13
+  },
+  song: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  number: {
+    color: '#1fda9a',
+    fontFamily: 'quicksand',
+    fontSize: 25,
+    marginBottom: 10,
+    textAlign: 'center'
   }
 });
 
