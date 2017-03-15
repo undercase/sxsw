@@ -12,10 +12,18 @@ import Button from './Button';
 
 export default class Upload extends Component {
   render() {
-    return (
-      <ScrollView style={styles.upload, styles.mainView}>
+    let image = (
+      <View>
         <Text style={styles.header}>Set List Picture</Text>
         <Image style={styles.setlist} source={{uri: this.props.path}} />
+      </View>
+    );
+    if (!this.props.path) {
+      image = null;
+    }
+    return (
+      <ScrollView style={styles.upload, styles.mainView}>
+        {image}
         <Text style={styles.header}>Venue Information</Text>
         <TextInput style={styles.info} placeholder='Name' onChangeText={(text) => this.setState({text})} />
         <TextInput style={styles.info} placeholder='Capacity' onChangeText={(text) => this.setState({text})} />
