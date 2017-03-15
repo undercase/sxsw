@@ -6,18 +6,7 @@ import {
 } from 'react-native';
 
 import styles from './styles';
-
-class Button extends Component {
-  render() {
-    return (
-      <TouchableOpacity activeOpacity={0.7} onPress={this.props.onPress}>
-        <View style={styles.button}>
-          <Text style={styles.buttonText}>{this.props.text}</Text>
-        </View>
-      </TouchableOpacity>
-    );
-  }
-}
+import Button from './Button';
 
 export default class Home extends Component {
   handlePress(name) {
@@ -25,7 +14,7 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <View style={styles.mainView}>
+      <View style={styles.mainView, styles.home}>
         <Text style={styles.logo}>harmony</Text>
         <Button onPress={() => this.handlePress('Scan')} text="SCAN A SET LIST" />
         <Button onPress={() => this.handlePress('Upload')} text="ENTER AN EVENT" />

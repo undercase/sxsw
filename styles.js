@@ -1,14 +1,18 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  navigator: {
-    flex: 1,
-  },
   mainView: {
-    backgroundColor: '#fff',
+    backgroundColor: '#fff'
+  },
+  home: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  scan: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'stretch'
   },
   logo: {
     color: '#1fda9a',
@@ -28,6 +32,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'opensans_light',
     fontSize: 25
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  actions: {
+    flex: 0,
+    width: 430
   }
 });
 
