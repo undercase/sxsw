@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     color: '#1fda9a',
     fontFamily: 'quicksand',
     fontSize: 80,
-    marginBottom: 30
+    marginBottom: 20
   },
   button: {
     backgroundColor: '#1fda9a',
@@ -37,6 +37,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'opensans_light',
     fontSize: 25
+  },
+  heart: {
+    color: '#1fda9a',
+    fontSize: 20,
+    marginTop: 20
+  },
+  red: {
+    color: '#db3340'
   },
   preview: {
     flex: 1,

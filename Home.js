@@ -18,6 +18,7 @@ export default class Home extends Component {
         <Text style={styles.logo}>harmony</Text>
         <Button onPress={() => this.handlePress('Scan')} text="SCAN A SET LIST" />
         <Button onPress={() => this.handlePress('Upload')} text="ENTER AN EVENT" />
+        <Text style={styles.heart}>made with <Text  style={styles.red}>❤</Text> by thomas & justin</Text>
       </View>
     );
   }

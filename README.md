@@ -1,2 +1,2 @@
 # sxsw
-hackathon project for sxsw 2017
+frontend react-native application that connects to harmony backend
