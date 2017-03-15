@@ -1,53 +1,36 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  Navigator
 } from 'react-native';
 
-export default class sxsw extends Component {
+import styles from './styles';
+import Home from './Home';
+import Scan from './Scan';
+import Upload from './Upload';
+
+
+class MainNavigator extends Component {
+  renderScene(route, navigator) {
+    if (route.name === 'Home') {
+      return <Home navigator={navigator} />;
+    } else if (route.name === 'Scan') {
+      return <Scan navigator={navigator} />;
+    } else if (route.name === 'Upload') {
+      return <Upload navigator={navigator} />;
+    }
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Navigator style={styles.navigator} initialRoute={{name: 'Home'}} renderScene={this.renderScene} />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default class sxsw extends Component {
+  render() {
+    return <MainNavigator />;
+  }
+}
 
 AppRegistry.registerComponent('sxsw', () => sxsw);
