@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
 import {
   View,
+  ScrollView,
   Text,
+  TextInput,
   Image
 } from 'react-native';
 
 import styles from './styles';
+import Button from './Button';
 
 export default class Upload extends Component {
   render() {
     return (
-      <View style={styles.mainView}>
-        <Image style={styles.previewImage} source={{uri: this.props.path}} />
-      </View>
+      <ScrollView style={styles.upload, styles.mainView}>
+        <Text style={styles.header}>Set List Picture</Text>
+        <Image style={styles.setlist} source={{uri: this.props.path}} />
+        <Text style={styles.header}>Venue Information</Text>
+        <TextInput style={styles.info} placeholder='Name' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Capacity' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Phone' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Website' onChangeText={(text) => this.setState({text})} />
+        <Text style={styles.header}>Promoter Information</Text>
+        <TextInput style={styles.info} placeholder='Name' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Street' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='City' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Province' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Postal Code' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Country' onChangeText={(text) => this.setState({text})} />
+        <TextInput style={styles.info} placeholder='Telephone' onChangeText={(text) => this.setState({text})} />
+        <Button text="Submit" onPress={() => {}} />
+      </ScrollView>
     );
   }
 }

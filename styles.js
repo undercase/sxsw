@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'stretch'
   },
+  upload: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   logo: {
     color: '#1fda9a',
     fontFamily: 'quicksand',
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#1fda9a',
     alignItems: 'center',
-    minWidth: 320,
+    minWidth: 330,
     padding: 15,
     margin: 10,
     borderRadius: 5
@@ -44,8 +48,22 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     width: 412
   },
-  previewImage: {
-    flex: 1
+  setlist: {
+    width: 412,
+    height: 300
+  },
+  header: {
+    color: '#1fda9a',
+    fontFamily: 'quicksand',
+    fontSize: 35,
+    margin: 15,
+    textAlign: 'center'
+  },
+  info: {
+    fontSize: 15,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 13
   }
 });
 
